@@ -38,3 +38,33 @@ const myObj = {
 myObj.normalFn(); // 15
 myObj.arrowFn(); // undefined
 ```
+
+```js
+let obj = { a: 10, b: 20 }
+let objCopy = obj
+
+objCopy.b = 50
+
+console.log(obj)
+console.log(objCopy)
+
+// both output will be { a: 10, b: 50 }
+// This is because objects are reference types in JavaScript.
+```
+
+```js
+var a
+function a() {
+  return true
+}
+console.log(a)
+
+var b = 5
+function b() {
+  return true
+}
+console.log(b)
+// Output will be:
+// a is a function declaration, so it is hoisted to the top of its scope.
+// b is a variable declaration, so it is hoisted but not initialized.
+```
