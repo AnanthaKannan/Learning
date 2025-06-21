@@ -136,3 +136,104 @@ child1.greet();  // Inherited from Parent
 child1.sayHi();  // Own method
 
 ```
+
+## What is Polymorphism?
+Polymorphism means "many forms" — in OOP, it allows a single method to behave differently based on the object calling it. <br>
+
+In TypeScript, polymorphism usually happens through: <br>
+1. Method Overriding (inherited classes)
+2. Interfaces or Abstract Classes
+
+✅ Benefits of Polymorphism: <br>
+1. Clean, extensible code
+2. Easy to add new behaviors without changing existing logic
+3. Supports open/closed principle (open for extension, closed for modification)
+
+
+
+```ts
+// Method Overriding (Runtime Polymorphism)
+class Animal {
+  makeSound(): void {
+    console.log("Some generic animal sound");
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Woof!");
+  }
+}
+
+class Cat extends Animal {
+  makeSound(): void {
+    console.log("Meow!");
+  }
+}
+
+// Polymorphism in action
+const animals: Animal[] = [new Dog(), new Cat(), new Animal()];
+
+for (const animal of animals) {
+  animal.makeSound(); // Different output for each object
+}
+
+```
+Even though each item in the animals array is typed as Animal, the actual method that gets called depends on the object's real class
+
+
+## Interfaces vs Abstract Classes in TypeScript
+| Feature                  | Interface                               | Abstract Class                              |
+| ------------------------ | --------------------------------------- | ------------------------------------------- |
+| **Purpose**              | Define a **contract** for a class       | Provide a **base** with some implementation |
+| **Implementation**       | ❌ No implementation (only declarations) | ✅ Can have method implementations           |
+| **Constructor**          | ❌ Not allowed                           | ✅ Can have a constructor                    |
+| **Multiple inheritance** | ✅ A class can implement multiple        | ❌ A class can only extend one               |
+| **Fields (properties)**  | ✅ Only declarations                     | ✅ Can have initialized fields               |
+| **Instantiable?**        | ❌ Cannot be instantiated                | ❌ Cannot be instantiated                    |
+| **Usage**                | To define structure/shape               | To define partial implementation + contract |
+
+### using interface
+```ts
+interface Animal {
+  name: string;
+  makeSound(): void;
+}
+
+class Dog implements Animal {
+  name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  makeSound(): encapsulated  {
+    console.log("Woof!");
+  }
+}
+
+```
+
+### using abstract class
+```ts
+abstract class Animal {
+  constructor(protected name: string) {}
+
+  abstract makeSound(): void;
+
+  move(): void {
+    console.log(`${this.name} is moving`);
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Woof!");
+  }
+}
+
+const dog = new Dog("Bruno");
+dog.makeSound(); // Woof!
+dog.move();      // Bruno is moving
+
+```
