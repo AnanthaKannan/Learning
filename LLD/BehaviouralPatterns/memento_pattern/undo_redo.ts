@@ -1,58 +1,38 @@
-class TextEditorMemento {
-  private content: string;
+class Device {
+  public name: string;
+  public temperature: number = 0;
 
-  constructor(content: string) {
-    this.content = content;
+  constructor(name: string) {
+    this.name = name;
   }
 
-  getContent(): string {
-    return this.content;
-  }
-}
-
-class Caretaker {
-  private history: TextEditorMemento[] = [];
-
-  setState(editor: TextEditor): void {
-    this.history.push(new TextEditorMemento(editor.getContent()));
-  }
-
-  undo(editor: TextEditor): void {
-    if (this.history.length <= 1) return;
-    this.history.pop();
-    editor.reset(this.history[this.history.length - 1]);
+  dispalyTemp(temp: number) {
+    this.temperature = temp;
+    console.log(`Device ${this.name} - Temperateure ${this.temperature}`)
   }
 }
 
-class TextEditor {
-  private content: string = "";
+class Notify {
 
-  getContent(): string {
-    return this.content;
+  private devices: Device[] = [];
+
+  subscibe(device: Device): void {
+    this.devices.push(device)
   }
 
-  write(content: string): void {
-    this.content = content;
-  }
-
-  reset(memento: TextEditorMemento): void {
-    this.content = memento.getContent();
+  publish(temp: number) {
+    this.devices.forEach((device) => device.dispalyTemp(temp))
   }
 }
 
-// Usage
-const editor = new TextEditor();
-const caretaker = new Caretaker();
+const notify = new Notify()
 
-editor.write('Hello world 1');
-caretaker.setState(editor);
+notify.subscibe(new Device('Device-a'))
+notify.subscibe(new Device('Device-b'))
+notify.subscibe(new Device('Device-c'))
 
-editor.write('Hello world 2');
-caretaker.setState(editor);
+notify.publish(22)
 
-editor.write('Hello world 3');
-caretaker.setState(editor);
+notify.publish(47)
 
-caretaker.undo(editor);
-
-console.log(editor.getContent());  // 👉 Should log: 'Hello world 2'
+notify.publish(41)
