@@ -120,3 +120,25 @@ class AppConfig {
 
 console.log(AppConfig.appName); // "My Application"
 ```
+
+## static
+```js
+class Test {
+  public stree: string = 'xyz'
+
+  public static fn(): void {
+    this.stree = 'aa' // not allowed
+  }
+}
+```
+
+stree is an instance property:
+Declared with public stree: string = 'xyz';
+This property belongs to instances of the class (new Test()), not the class itself.
+fn() is a static method:
+Declared with static, so it belongs to the class Test, not to instances of it.
+Inside a static method, this refers to the class (Test), not to an instance of it.
+Problem:
+this.stree = 'aa' inside static fn() is trying to assign to Test.stree.
+But stree is not a static property — it's an instance property.
+TypeScript throws an error like:
