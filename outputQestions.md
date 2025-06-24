@@ -68,3 +68,54 @@ console.log(b)
 // a is a function declaration, so it is hoisted to the top of its scope.
 // b is a variable declaration, so it is hoisted but not initialized.
 ```
+
+
+```js
+const add = (x) => x + x;
+
+function myFunc(num = 2, value = add(num)) {
+  console.log(num, value);
+}
+
+myFunc(); // 2 4
+myFunc(3); // 3 6
+```
+
+```js
+function counter() {
+  let count = 0;
+  return function () {
+    count++;
+    console.log(count);
+  };
+}
+
+const increment = counter();
+increment();
+increment();
+increment();
+
+// 1, 2, 3
+```
+
+```js
+console.log('Start');
+setTimeout(() => console.log('Middle'), 0);
+new Promise((resolve) => resolve(console.log('Resolve')));
+Promise.resolve().then(() => console.log('Promise'));
+console.log('End');
+
+/*
+Start
+Resolve
+End
+Promise
+Middle
+*/ 
+```
+
+```js
+for (var i = 0; i < 3; i++) {
+  setTimeout(() => console.log(i), 100);
+}
+```

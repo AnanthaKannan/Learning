@@ -28,19 +28,6 @@ function TestComp() {
 export default TestComp;
 ```
 
----
-
-2. what is the output of that
-
-```js
-const add = (x) => x + x;
-
-function myFunc(num = 2, value = add(num)) {
-  console.log(num, value);
-}
-
-myFunc(); // 2 4
-myFunc(3); // 3 6
 ```
 
 JavaScript evaluates parameters in order (left to right). Since num is initialized first, value can safely use num in its default assignment.
