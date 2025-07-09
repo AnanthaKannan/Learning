@@ -164,4 +164,5 @@ MongoDB drivers automatically monitor the health of all replica set members.
 4. is we are read enabled in secondary, is that always point one secondary or is that going to change the secondary.
 5. is that replication is db based or collection based
 6. we are waiting to secondary to update the data, is that efficient way
-7. https://www.mongodb.com/docs/manual/replication/
+7. How it is choosing the secondary at what scenario
+8. https://www.mongodb.com/docs/manual/replication/
