@@ -1,7 +1,7 @@
 # Forward and Reverse Proxy
 
 
-## Revers Proxy
+# Revers Proxy
 * A reverse proxy is a server that sits in front of one or more backend servers and handles requests from clients (like web browsers) on their behalf. Instead of the client connecting directly to the backend server, the reverse proxy acts as an intermediary:
 
 1. The client sends the request to the proxy.
@@ -52,6 +52,32 @@ But a reverse proxy can act as a load balancer.
 * It does not have to distribute traffic—it could forward all requests to a single backend server.
 * A reverse proxy can be configured to perform load balancing
 * So when you use NGINX as a reverse proxy, you can also add a upstream block to make it act as a load balancer:
+
+# Forward Proxy?
+A forward proxy is a server that sits between a client (like your browser) and the internet.<br>
+When a client wants to access a website:<br>
+
+* Instead of sending the request directly to the site, it sends the request to the forward proxy.
+
+* The proxy forwards the request to the internet, gets the response, and sends it back to the client.
+
+So the website never sees the client’s real IP address—it only sees the proxy’s IP.<br>
+
+### 📖 How does it work?
+1. Your browser sends a request to the forward proxy:
+GET http://example.com
+2. The forward proxy forwards the request to example.com.
+3. It receives the response from example.com.
+4. It passes the response back to your browser.
+
+### ✅ Why use a Forward Proxy?
+* 🌐 Access blocked content (e.g., bypass geo-restrictions).
+* 🛡 Hide client’s IP address (anonymity).
+* 📦 Cache content for faster access.
+* 🚨 Enforce policies (block some sites or monitor usage).
+
+
+
 
 ## Comparison of forward and revers proxy
 ![alt text](image-4.png)
