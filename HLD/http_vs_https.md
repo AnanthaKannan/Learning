@@ -1,4 +1,5 @@
 # HTTP VS HTTPS
+HTTP (Hypertext Transfer Protocol) is the protocol used by browsers (like Chrome or Firefox) to request and receive web pages from servers.
 
 | Feature           | HTTP       | HTTPS                |
 | ----------------- | ---------- | -------------------- |
