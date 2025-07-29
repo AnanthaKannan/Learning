@@ -52,7 +52,7 @@ Easy to upgrade, replace, or take down servers without affecting users.
 * hardware for enter price grader
 
 ## Key take away
-![alt text](image-6.png)
+![alt text](../images/image-6.png)
 
 ---
 

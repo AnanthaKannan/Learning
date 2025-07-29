@@ -32,7 +32,7 @@ logThreeAndFour();
 1. new execution context created. call stack take the `console.log("One")` and print 'One'
 2. new execution context created, call stack take the `console.log("Two")` and print 'Two'
 3. call stack take the `logThreeAndFour()` and following the same
-   ![alt text]({66DFF32D-4C80-45D3-9F3F-738CC9936878}.png)
+   ![alt text](../images/{66DFF32D-4C80-45D3-9F3F-738CC9936878}.png)
 4. one by one execution is done, it will pop out
 
 ## Micro and Macro task

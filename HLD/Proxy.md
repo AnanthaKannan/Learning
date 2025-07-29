@@ -40,7 +40,7 @@ This means:<br>
   1. The browser then decompresses the data automatically and renders it normally.
 
 
-![alt text](image-5.png)
+![alt text](../images/image-5.png)
 
 
 ### Is a Reverse Proxy a Load Balancer?
@@ -80,4 +80,4 @@ GET http://example.com
 
 
 ## Comparison of forward and revers proxy
-![alt text](image-4.png)
+![alt text](../images/image-4.png)
