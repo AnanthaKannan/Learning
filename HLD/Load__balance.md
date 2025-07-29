@@ -21,7 +21,7 @@ Balances the workload across servers, avoiding bottlenecks.
 Easy to upgrade, replace, or take down servers without affecting users.
 
 ## Types of Load Balancers
-* Hardware Load Balancer (expensive, used in data centers)
+* Hardware Load Balancer (expensive, used in data centers) (F5, Citrix)
 * Software Load Balancer (e.g., HAProxy, Nginx, Envoy)
 * Cloud-based LB (AWS ELB, Azure LB, GCP LB)
 
@@ -55,6 +55,8 @@ Easy to upgrade, replace, or take down servers without affecting users.
 ![alt text](../images/image-6.png)
 
 
+## Based on Layer
+Load Balancers can operate at different OSI layers:
 ## Layer 7 Load Balancing (Application Layer)
 * Operates at: OSI Layer 7 (Application Layer)
 * Protocols used: HTTP, HTTPS, WebSocket, gRPC
@@ -109,9 +111,3 @@ Your L4 load balancer looks at this and just says: <br>
 1. how to choose right load balancer
 2. based on layer. layer 4 and layer 7 explain bit more on this
 ---
-
-* Based on Layer
-* Based on Deployment
-  * Hardware load balancer: Specialized devices (F5, Citrix)
-  * Software load balancer (nginx, HAproxy)
-  * Cloud base load balancer: ELB(AWS Elastic Load Balance)
