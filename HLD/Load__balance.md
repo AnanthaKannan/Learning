@@ -54,6 +54,60 @@ Easy to upgrade, replace, or take down servers without affecting users.
 ## Key take away
 ![alt text](../images/image-6.png)
 
+
+## Layer 7 Load Balancing (Application Layer)
+* Operates at: OSI Layer 7 (Application Layer)
+* Protocols used: HTTP, HTTPS, WebSocket, gRPC
+* Decision based on: URL, headers, cookies, HTTP method, etc.
+* Speed: Slightly slower than L4 (more processing)
+
+✅ Example:
+An HTTP request comes to https://example.com/api/user, the L7 load balancer: <br>
+Sees the path `/api/user` <br>
+Routes to User Service instead of other services like `/api/order` <br>
+
+✅ Use case:
+* Microservices architectures (based on path)
+* API Gateway functionality
+* SSL termination
+* Advanced routing and security policies
+
+## Layer 4 Load Balancing (Transport Layer)
+
+✅ Example:
+An incoming TCP connection to port 80 (HTTP) is routed to one of the backend servers based on IP and port.
+<br>
+Say a client tries to access:
+`https://example.com` <br>
+This means: <br>
+  * Protocol: TCP
+  * Port: 443 (HTTPS)
+  * IP: 203.0.113.10
+
+Your L4 load balancer looks at this and just says: <br>
+"Send this TCP connection to one of the backend servers running HTTPS."
+
+
+
+
+## Difference between Layer 4 and Layer 7 Load Balancing
+
+| Feature          | Layer 4 Load Balancer                | Layer 7 Load Balancer                    |
+| ---------------- | ------------------------------------ | ---------------------------------------- |
+| Layer            | Transport Layer (L4)                 | Application Layer (L7)                   |
+| Protocols        | TCP, UDP                             | HTTP, HTTPS, WebSocket, gRPC             |
+| Routing Based On | IP, Port                             | URL path, headers, cookies, method, etc. |
+| Content-aware?   | ❌ No                                 | ✅ Yes                                    |
+| Speed            | ⚡ Faster                             | 🧠 Slightly slower (more logic involved)  |
+| Use cases        | General load distribution, fast apps | Microservices, APIs, complex routing     |
+
+
+----
+
+
+## Questions
+1. how to choose right load balancer
+2. based on layer. layer 4 and layer 7 explain bit more on this
 ---
 
 * Based on Layer
@@ -61,7 +115,3 @@ Easy to upgrade, replace, or take down servers without affecting users.
   * Hardware load balancer: Specialized devices (F5, Citrix)
   * Software load balancer (nginx, HAproxy)
   * Cloud base load balancer: ELB(AWS Elastic Load Balance)
-
-## Questions
-1. how to choose right load balancer
-2. based on layer. layer 4 and layer 7 explain bit more on this
