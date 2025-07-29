@@ -1,11 +1,11 @@
 # TCP
-The TCP protocol (Transmission Control Protocol) is one of the core protocols of the Internet protocol suite. It is used to establish and manage reliable communication between devices over a network, such as the Internet.
+The TCP protocol (Transmission Control Protocol) is one of the core protocols of the Internet protocol suite. It is used to establish and manage **reliable** communication between devices over a network, such as the Internet.
 ---
 ✅ What is TCP?
 
 * TCP is a connection-oriented protocol, meaning it establishes a connection between two devices before transmitting data
 * It ensures that data is delivered accurately and in the correct order.
-* Used for applications where reliable delivery is critical (like web browsing, email, and file transfers).
+* Used for applications where **reliable** delivery is critical (like web browsing, email, and file transfers).
 ---
 ✅ How TCP works (key features):
 

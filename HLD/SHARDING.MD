@@ -87,7 +87,7 @@ MongoDB supports **two ways** to divide data:
 ---
 
 ## 🪛 Example Architecture Diagram
-![arc_diagram](arc_diagram.png)
+![arc_diagram](../images/arc_diagram.png)
 
 ---
 
