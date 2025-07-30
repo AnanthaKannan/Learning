@@ -2,8 +2,20 @@
 * HTTP (Hypertext Transfer Protocol) is the foundation of data communication on the World Wide Web. It is an application-layer protocol used for transmitting hypermedia documents, such as HTML.
 * HTTP is a request-response protocol, where a client (usually a web browser) sends a request to a server, which then responds with the requested resource.
 * HTTP operates over TCP/IP, ensuring reliable data transfer. It is stateless, meaning each request from a client to a server is treated as an independent transaction, without retaining session information.
+* HTTP/1.1 can give 6 parallel call at a time, if there is 20 calls, the first 6 call send first, rest 14 calls will be queued. once the first 6 resolved, then other 6 will be be execute. to prevent multiple TCP connection.
+* HTTP/2: allow 100+ requests are sent immediately, and the server responds as it’s able — based on request priority, bandwidth, and flow control. as it is using Multiplexing concept one TCP connection enough for multiple request.
+* http1.1 parallely create 6 TCP connection.
+TCP connection will not close until something happen.
+This same opened connection http used there feature request as well
 
+## ✅ When does HTTP/2 close the TCP connection?
+HTTP/2 opens one persistent TCP connection per origin. It closes that connection when one of the following happens:
+1. Inactivity / Idle Timeout
+If there's no activity (no requests or responses) for a while, the connection may be closed to free up resources.
 
+* Who sets the timeout?
+  * Server often sets the idle timeout. E.g., NGINX might have a default of 5–10 minutes.
+  * Browsers may also proactively close idle connections if system memory is low or there's pressure.
 
 # 🌐 Difference Between HTTP and HTTP/2
 
@@ -46,6 +58,58 @@ Result: Fewer round-trips, faster loading ⚡
 #### 📦 In Simple Terms:
 * Without Server Push: Client requests → Server responds
 * With Server Push: Server says, "Hey, I know you'll need these files too. Here they are!"
+
+### Request Prioritization
+* 🔴 In HTTP/1.1 – ❌ No Request Prioritization
+  1. Each request is treated independently.
+  2. If the browser requests multiple resources (like images, CSS, JS), they are handled mostly in the order sent, or based on how the browser tries to manage them.
+  3. Because there's no built-in prioritization, important resources (like critical CSS) might be delayed if less important ones (like large images) are requested first.
+  4. You can only open a limited number of parallel connections (usually 6 per domain), so managing load order becomes inefficient.
+
+* ✅ In HTTP/2 – Request Prioritization Available
+1. HTTP/2 introduces a binary framing layer which allows multiplexing: sending multiple requests/responses at the same time over a single connection.
+2. Along with that, HTTP/2 allows assigning priorities to each request:
+   * Each stream (a request-response pair) can have a weight (from 1 to 256).
+   * Streams can also have dependencies (i.e., "this request depends on that one").
+
+3. This lets the browser or client say:
+   * “This CSS file is more important than the background image, load it first.”
+4. As a result, important resources load faster, improving performance and perceived speed.
+
+### ✅ Does the browser send priority info in the request?
+* Yes, but not in the normal HTTP headers that you'd see in tools like Postman or your browser's DevTools network tab.
+* Instead, HTTP/2 adds a **binary framing layer**. One of the frame types is called a `PRIORITY` frame, and it carries:
+  * Stream Dependency (what this request depends on)
+  * Weight (from 1 to 256)
+  * Exclusive flag (for dependency trees)
+* This priority information is not part of the HTTP headers — it’s a separate, low-level frame sent by the browser to the server.
+
+🔍 Example (Conceptual)
+Let’s say the browser requests: 
+  * /main.css → weight 220 (critical style)
+  * /image.jpg → weight 100 (non-critical)
+  * /tracking.js → weight 10 (least important)
+
+The browser may send PRIORITY frames that describe:
+
+  * Stream #3 depends on stream #1 and has weight 220
+  * Stream #5 depends on stream #1 and has weight 100
+  * Stream #7 depends on stream #1 and has weight 10
+  * This tells the server: “Please send main.css first.”
+
+## What is in dev tool priority
+![alt text](image-2.png)
+* 🔸 It's not the HTTP protocol's own feature
+* In HTTP/1.1, the protocol does not support request prioritization natively.
+* Decide which requests to send first (limited by max 6 parallel connections per domain)
+* The "Priority" shown in DevTools is from the browser’s internal prioritization logic, not something from the HTTP/1.1 protocol itself.
+* 🔸 The browser assigns priorities to different types of resources
+* The browser (like Chrome) makes smart guesses about what should load first based on:
+* The type of resource (e.g., HTML, CSS, JS, images)
+* In HTTP/1.1, it’s just how the browser orders requests.
+* In HTTP/2, this can translate into real protocol-level prioritization via PRIORITY frames.
+
+
 
 
 ### ⚠️ Why Server Push Is Rarely Used Today
@@ -109,6 +173,16 @@ Result: Fewer round-trips, faster loading ⚡
   * Each request/response runs in its own stream.
   * One lost packet doesn't block other streams.
   
+
+## HTTP/2 Parallelism Summary
+| Feature                             | HTTP/1.1         | HTTP/2                         |
+| ----------------------------------- | ---------------- | ------------------------------ |
+| Connections per origin              | \~6              | 1                              |
+| Parallel requests per connection    | 1 per connection | 100s of streams per connection |
+| Multiplexing support                | ❌ No             | ✅ Yes                          |
+| Server needs to support it          | ✅ Yes            | ✅ Yes                          |
+| Request blocking (by slow resource) | ✅ Often          | ❌ Very rarely                  |
+
 ## 📘 References
 
 - [HTTP/2 Specification – RFC 7540](https://datatracker.ietf.org/doc/html/rfc7540)
