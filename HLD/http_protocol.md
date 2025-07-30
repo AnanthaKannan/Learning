@@ -189,3 +189,5 @@ The browser may send PRIORITY frames that describe:
 - [MDN Web Docs – HTTP/2](https://developer.mozilla.org/en-US/docs/Web/HTTP/Overview)
 
 ---
+## Response code
+![alt text](image-3.png)
