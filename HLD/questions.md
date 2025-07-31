@@ -3,4 +3,5 @@
 3. what is rate limiting
 4. throttling (how api limiting)
 5. how to product DDoS Attach from TCP and UDP
-  
+6. difference between CPU and GPU
+7. what is CSRF attack
