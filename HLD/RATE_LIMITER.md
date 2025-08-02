@@ -14,11 +14,6 @@ This prevents:
 ## Error code
 429 - Too many request
 
-## 1. Token Bucket algorithm
-* Tokens are added at a rate (e.g., 1 per second)
-* Each request consumes a token; if no token, reject
-* ✅ Allows bursts, but maintains average rate
-
 ### Example
 Say you have: <br>
 * Capacity = 10 tokens 
@@ -34,6 +29,11 @@ At t=3, user sends 7 requests → only 8 tokens available → 1 request is rejec
 * In Distributed Caches (e.g., Redis used to track counters globally)
 
 ![alt text](image-12.png)
+
+## 1. Token Bucket algorithm
+* Tokens are added at a rate (e.g., 1 per second)
+* Each request consumes a token; if no token, reject
+* ✅ Allows bursts, but maintains average rate
 
 ## 2. Leak Bucket algorithm
 * Requests go into a "bucket" and leak at a fixed rate
