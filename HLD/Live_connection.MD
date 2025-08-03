@@ -1,3 +1,8 @@
+## Live connection
+1. simple poling
+2. SSE
+3. Websocket
+4. WebRTC
 
 ## 🔌 What is WebSocket?
 WebSocket is a communication protocol that provides full-duplex (two-way) communication between a client (like a browser) and a server over a single, long-lived connection. It is using single TCP connection.

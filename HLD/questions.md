@@ -10,3 +10,6 @@
 10. difference between redis and memcache
 11. webRtc
 12. lean about redis cluster
+13. pre-signed url
+14. how shading and replica work in sql
+15. what is hash map

@@ -12,7 +12,11 @@
 --------------------------------
 1. LRU - Least recent used
 
-
+## Note
+1. Dynamo db transaction support up to 100 records
+2. what's app basically handle 2 million connection per server  
+3. webserver's are stateless, that means load balancer terminate the request by layer 7.
+4. 
 
 ## When to consider horizontal scaling
 | Metric                        | When to Scale Horizontally                                     |
