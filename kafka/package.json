@@ -1,0 +1,17 @@
+{
+  "name": "zip-brute",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "get-windows": "^9.2.0",
+    "kafkajs": "^2.2.4",
+    "ps-list": "^8.1.1"
+  },
+  "description": ""
+}
