@@ -77,3 +77,8 @@ upstream backend {
 1. if the chat server multiple, user_a connected to server_a and user_b connected to server_b then how the user_a message send to user_b as they are connected to different server. for that reason we are using redis, redis know which server connect to which user
 2. user_a send a message and chat server get the detail user_b connection detail from redis and connected throw hash by server b and send the message
 3. websocket is a single connection. if it connected it should not be disconnected.
+
+
+
+## Youtube
+![alt text](image-19.png)

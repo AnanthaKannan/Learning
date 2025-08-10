@@ -1,0 +1,2 @@
+* If the list is long, the reversed string concatenation (strB = val + strB) can be costly because string concatenation at the front is O(n) per operation, making that part O(n²) overall.
+* A better way: store values in an array, then reverse and compare — avoids expensive front concatenations.

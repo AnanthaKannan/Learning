@@ -1,1 +1,0 @@
-https://ashvinchoudhary.medium.com/understanding-cap-theorem-real-world-examples-and-databases-d1ce0d807dca

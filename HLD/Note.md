@@ -9,6 +9,11 @@
 9. distributed
 10. consistency
 11. throughput
+12. durability - how long something can last and remain usable, especially under stress, wear, or over time
+13. reliability - how consistently something performs as expected over time without failing
+--------------------------------
+## Time calculation
+1Million * 1kb * 365 = .34TB
 --------------------------------
 1. LRU - Least recent used
 

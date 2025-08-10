@@ -13,3 +13,4 @@
 13. pre-signed url
 14. how shading and replica work in sql
 15. what is hash map
+16. Multipart upload and resumable uploads
