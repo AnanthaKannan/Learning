@@ -63,3 +63,20 @@ You’ll get real-time feedback on your code, practice mock interviews, and prep
 
 No more guesswork - just focused, practical guidance from those who’ve cracked it.
 
+
+### system design
+[question-1](https://www.linkedin.com/posts/anmol-agarwal-674a21166_postgres-faang-activity-7360522407016611841-zLAT?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+[2](https://www.linkedin.com/posts/rajatgajbhiye_trust-me-system-design-is-not-hard-if-activity-7360672080381603840-JauV?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+
+### Interview questions
+
+[question-1](https://www.linkedin.com/posts/karansingla007_reactjs-javascript-webdevelopment-activity-7360515587078275072-DTJc?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+[question-2](https://www.linkedin.com/posts/scortier_google-interviews-jobs-activity-7359959055622172672-ZFyd?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+### DSA
+[1](https://www.linkedin.com/posts/palaksharma2312_most-frequently-asked-dsa-questions-in-maang-ugcPost-7358889218414141440-e25b?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+[2](https://www.linkedin.com/posts/neha-jain-279b80118_%F0%9D%97%97%F0%9D%97%A6%F0%9D%97%94-%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%BB%F0%9D%98%81-%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%BC%F0%9D%98%82%F0%9D%98%81-%F0%9D%98%80%F0%9D%97%BC%F0%9D%97%B9%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%BB-activity-7360511073730379776-UAtl?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
