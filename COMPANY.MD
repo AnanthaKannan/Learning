@@ -12,3 +12,7 @@ Automattic
 Remote.com
 GitLab
 RemNote.com
+
+
+-------- Non remote -----
+Ebay

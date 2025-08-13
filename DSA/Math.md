@@ -27,3 +27,11 @@ const gcd = (a: number, b: number) => {
 // calculation
 const k = k % length; // 4 % 3 ans 1
 ```
+
+### add the number from 1-100
+```
+formula = n*(n-1)/2
+```
+
+### 
+
