@@ -69,6 +69,9 @@ No more guesswork - just focused, practical guidance from those who’ve cracked
 
 [2](https://www.linkedin.com/posts/rajatgajbhiye_trust-me-system-design-is-not-hard-if-activity-7360672080381603840-JauV?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
 
+[3](https://www.linkedin.com/posts/ankur-dhawan01_sde1-sde2-sde3-activity-7361613039365705728-DfNg?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+[4](https://www.linkedin.com/posts/rajatgajbhiye_i-have-researched-lots-of-product-based-companies-activity-7362332279987146754-HTDr?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
 
 ### Interview questions
 
@@ -80,3 +83,15 @@ No more guesswork - just focused, practical guidance from those who’ve cracked
 [1](https://www.linkedin.com/posts/palaksharma2312_most-frequently-asked-dsa-questions-in-maang-ugcPost-7358889218414141440-e25b?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
 
 [2](https://www.linkedin.com/posts/neha-jain-279b80118_%F0%9D%97%97%F0%9D%97%A6%F0%9D%97%94-%F0%9D%97%B6%F0%9D%98%80%F0%9D%97%BB%F0%9D%98%81-%F0%9D%97%AE%F0%9D%97%AF%F0%9D%97%BC%F0%9D%98%82%F0%9D%98%81-%F0%9D%98%80%F0%9D%97%BC%F0%9D%97%B9%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%BB-activity-7360511073730379776-UAtl?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+[3](https://www.linkedin.com/posts/arunm-engineer_in-last-8-months-these-were-exact-questions-ugcPost-7362339323335098368-7QdP?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+
+
+
+### LLD
+[React LLD](https://www.linkedin.com/posts/sakshi-gawande_reactjs-low-level-design-lld-interview-activity-7362328505864327168-xTdc?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)
+
+
+### Interview experience
+[HCLTech](https://www.linkedin.com/posts/dimple-kumari_hcltech-%F0%9D%97%9C%F0%9D%97%BB%F0%9D%98%81%F0%9D%97%B2%F0%9D%97%BF%F0%9D%98%83%F0%9D%97%B6%F0%9D%97%B2%F0%9D%98%84-%F0%9D%97%98%F0%9D%98%85%F0%9D%97%BD%F0%9D%97%B2%F0%9D%97%BF%F0%9D%97%B6%F0%9D%97%B2-activity-7361635136578220032-pIrr?utm_source=share&utm_medium=member_desktop&rcm=ACoAACQK9yIBr3SwAQ3lkkYP37YO-IR1Izh74J4)

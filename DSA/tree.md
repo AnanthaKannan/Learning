@@ -129,5 +129,65 @@ function maxDepth(root: TreeNode | null): number {
 const tree = new TreeNode(1,
     new TreeNode(2), new TreeNode(3))
 
-maxDepth(truee)
+maxDepth(tree)
+```
+
+### Reference In-Order Traversal
+It will iterate ascending order, if the tree is binary.
+```ts
+// Example-1
+function dfs(node: TreeNode | null) {
+        if (!node) return;
+        dfs(node.left);        // Visit left
+        result.push(node.val); // Visit node
+        dfs(node.right);       // Visit right
+    }
+
+```
+
+### BFS Reference
+```ts
+function minDepth(root: TreeNode | null): number {
+    if (!root) return 0;
+
+    const queue: [TreeNode, number][] = [[root, 1]];
+
+    while (queue.length > 0) {
+        const [node, depth] = queue.shift()!;
+
+        // If leaf node, return depth
+        if (!node.left && !node.right) {
+            return depth;
+        }
+
+        if (node.left) {
+            queue.push([node.left, depth + 1]);
+        }
+        if (node.right) {
+            queue.push([node.right, depth + 1]);
+        }
+    }
+
+    return 0; // Should never be reached
+}
+```
+
+### Code reference - 1
+```ts
+function mergeTrees(root1: TreeNode | null, root2: TreeNode | null): TreeNode | null {
+  if (!root1 && !root2) return null;
+  if (!root1) return root2;
+  if (!root2) return root1;
+
+  const merged = new TreeNode(root1.val + root2.val);
+  merged.left = mergeTrees(root1.left, root2.left);
+  merged.right = mergeTrees(root1.right, root2.right);
+  return merged;
+}
+
+const t1 = new TreeNode(1, new TreeNode(3, new TreeNode(5)), new TreeNode(2));
+const t2 = new TreeNode(2, new TreeNode(1, null, new TreeNode(4)), new TreeNode(3, null, new TreeNode(7)));
+
+const mergedTree = mergeTrees(t1, t2);
+
 ```

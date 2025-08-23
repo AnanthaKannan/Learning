@@ -21,4 +21,17 @@ let current = head
 }
 ```
 
+## Revers the linked list
+```js
+  let current = head;
+  let prev: ListNode | null = null;
+  while (current) {
+    let nexNode = current.next;
+    current.next = prev;
+    prev = current
+    current = nexNode;
+  }
+  console.log(prev)
+```
+
 
