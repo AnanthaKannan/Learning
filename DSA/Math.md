@@ -46,8 +46,19 @@ Explanation:
 12 + 02 + 02 = 1
 ```
 
+## Find next permutation
+1. Scan from right → find first index i where nums[i] < nums[i+1].
+2. Scan from right → find first index j where nums[j] > nums[i].
+3. Swap nums[i] and nums[j].
+4. Reverse the subarray nums[i+1:].
+
+```
+[1,5,1]
+```
+
 ### Question
 1. what is mean by square root
 
 ### understand this
 https://leetcode.com/problems/subarray-sum-equals-k/description/
+
