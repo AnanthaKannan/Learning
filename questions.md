@@ -918,3 +918,6 @@ eventEmitter.on("greet", (name) => {
 
 eventEmitter.emit("greet", "John"); // Output: Hello, John!
 ```
+
+## Promise.race()
+**Promise.race()** is a method in JavaScript that lets you run multiple promises in parallel and returns the result of the first one that settles (whether it’s fulfilled or rejected).

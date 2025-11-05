@@ -461,3 +461,40 @@ export default function MyComponent() {
 - It doesn’t break your code; it just gives early warnings to keep your codebase healthy.
 
 ---
+
+## What are some pitfalls about using context in React?
+
+## How do you reset a component's state in React?
+1.  Reset State Manually
+2.  Use an Initial State Variable
+3.  Using a Reducer (for Complex State)
+4.  Reset State by Changing the Component’s key
+```js
+function App() {
+  const [resetKey, setResetKey] = useState(0);
+
+  return (
+    <div>
+      <Counter key={resetKey} />
+      <button onClick={() => setResetKey(prev => prev + 1)}>Reset Counter</button>
+    </div>
+  );
+}
+
+function Counter() {
+  const [count, setCount] = useState(0);
+  return (
+    <div>
+      <p>{count}</p>
+      <button onClick={() => setCount(count + 1)}>Increment</button>
+    </div>
+  );
+}
+```
+
+30 How do you localize React applications?
+34 What is the Flux pattern and what are its benefits?
+37 Explain server-side rendering of React applications and its benefits?
+38 Explain static generation of React applications and its benefits?
+39 Explain the presentational vs container component pattern in React
+40 What are some common pitfalls when doing data fetching in React?

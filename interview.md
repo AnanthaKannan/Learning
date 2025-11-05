@@ -6,15 +6,12 @@
 
 - Easy hashmap-based question
 - Polyfill for Promise.allSettled()
-- Discussion on hooks and their use cases
-- useLayoutEffect hook
 - Polyfill for useEffect in React( 𝐔𝐩𝐜𝐨𝐦𝐢𝐧𝐠: 𝐒𝐨𝐧𝐢'𝐬 𝐟𝐫𝐨𝐧𝐭𝐞𝐧𝐝 𝐝𝐨𝐜)
 
 𝟐𝐧𝐝 𝐑𝐨𝐮𝐧𝐝
 
 - Asked about project architecture
 - How to build a project from scratch, followed by a few follow-up questions
-  Implemented an interactive diagonal feature (Added to 𝐒𝐨𝐧𝐢'𝐬 𝐟𝐫𝐨𝐧𝐭𝐞𝐧𝐝 𝐝𝐨𝐜)
 
 𝟑𝐫𝐝 𝐑𝐨𝐮𝐧𝐝 (𝐌𝐚𝐧𝐚𝐠𝐞𝐫𝐢𝐚𝐥)
 
