@@ -3,7 +3,7 @@ interface ILogger {
   error(message: string): void;
 }
 
-class Console {
+class Consolex implements ILogger {
 
   log(message: string): void {
     console.log(`INFO : ${message}`)
@@ -14,5 +14,5 @@ class Console {
   }
 }
 
-const cl = new Console()
+const cl = new Consolex()
 cl.log('hello')
