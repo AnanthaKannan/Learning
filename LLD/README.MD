@@ -12,11 +12,44 @@
 
 ## What is the use of static methods in a class?
 Static methods belong to the class itself rather than to any specific instance of the class. They can be called without creating an instance of the class.
+## What is the use of abstract class?
+* In TypeScript, an abstract class is a special kind of class that cannot be instantiated directly — you can’t create an object from it.
+* Define a common structure that multiple subclasses can share.
+* Enforce a contract — i.e., ensure all subclasses implement certain methods.
+```ts
+abstract class Animal {
+  // Abstract method (must be implemented by subclasses)
+  abstract makeSound(): void;
 
+  // Concrete method (shared logic)
+  move(): void {
+    console.log("Moving...");
+  }
+}
+
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Woof! 🐶");
+  }
+}
+
+class Cat extends Animal {
+  makeSound(): void {
+    console.log("Meow! 🐱");
+  }
+}
+
+const dog = new Dog();
+dog.makeSound(); // Output: Woof! 🐶
+dog.move();      // Output: Moving...
+
+// const animal = new Animal(); ❌ Error: Cannot create an instance of an abstract class
+
+```
 
 ## Projects
 
-1. URL Shortener – your starting idea
+1. URL Shortener – your starting idea ✅
 2. Parking Lot System – car entry, ticket, and payment
 3. Library Management System – books, users, checkout, return
 4. Vending Machine – coin insert, product selection, change
