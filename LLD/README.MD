@@ -44,7 +44,44 @@ dog.makeSound(); // Output: Woof! 🐶
 dog.move();      // Output: Moving...
 
 // const animal = new Animal(); ❌ Error: Cannot create an instance of an abstract class
+```
+## What is Polymorphism?
+Polymorphism is a core concept in object-oriented programming that allows objects of different classes to be treated as objects of a common superclass. It enables a single interface to represent different underlying forms (data types). The most common use of polymorphism is when a parent class reference is used to refer to a child class object.
+```ts
+class Animal {
+  makeSound(): void {
+    console.log("Some generic animal sound");
+  }
+}
+class Dog extends Animal {
+  makeSound(): void {
+    console.log("Woof! 🐶");
+  }
+}
+class Cat extends Animal {
+  makeSound(): void {
+    console.log("Meow! 🐱");
+  }
+}
 
+function playSound(animal: Animal): void {
+  animal.makeSound();
+}
+
+const myDog = new Dog();
+const myCat = new Cat();
+playSound(myDog); // Output: Woof! 🐶
+playSound(myCat); // Output: Meow! 🐱
+```
+
+## create enum in typescript
+```ts
+enum Direction {
+  UP = "UP",
+  DOWN = "DOWN",
+  LEFT = "LEFT",
+  RIGHT = "RIGHT"
+}
 ```
 
 ## Projects
