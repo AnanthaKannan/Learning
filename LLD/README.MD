@@ -87,8 +87,8 @@ enum Direction {
 ## Projects
 
 1. URL Shortener – your starting idea ✅
-2. Parking Lot System – car entry, ticket, and payment
-3. Library Management System – books, users, checkout, return
+2. Parking Lot System – car entry, ticket, and payment ✅
+3. Library Management System – books, users, checkout, return ✅
 4. Vending Machine – coin insert, product selection, change
 5. Elevator System – multiple elevators, request handling
 6. Snake and Ladder Game – game board design and turn management
