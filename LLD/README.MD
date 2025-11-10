@@ -84,12 +84,15 @@ enum Direction {
 }
 ```
 
+##     "noImplicitOverride": true
+This setting in the TypeScript configuration file (tsconfig.json) ensures that when you override a method from a base class in a derived class, you must explicitly use the override keyword. This helps catch errors where you might accidentally think you're overriding a method, but due to a typo or signature mismatch, you're actually creating a new method instead.
+
 ## Projects
 
 1. URL Shortener – your starting idea ✅
 2. Parking Lot System – car entry, ticket, and payment ✅
 3. Library Management System – books, users, checkout, return ✅
-4. Vending Machine – coin insert, product selection, change
+4. Vending Machine – coin insert, product selection, change ✅
 5. Elevator System – multiple elevators, request handling
 6. Snake and Ladder Game – game board design and turn management
 7. Tic-Tac-Toe Game – multiplayer design
