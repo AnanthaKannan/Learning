@@ -921,3 +921,54 @@ eventEmitter.emit("greet", "John"); // Output: Hello, John!
 
 ## Promise.race()
 **Promise.race()** is a method in JavaScript that lets you run multiple promises in parallel and returns the result of the first one that settles (whether it’s fulfilled or rejected).
+
+
+## Difference between npm and npx
+1. The command npm install is used to install dependencies in your project and update the package.json file accordingly. For example, if you run npm i nodemon --save-dev, it will install the nodemon package as a development dependency and add it to the devDependencies section of your package.json file.
+
+2. The command npx nodemon test.js will first look for the nodemon package inside the local node_modules folder of your project. If it is not found locally, it will check for a globally installed version. If it’s not available globally either, npx will download the package from the npm registry, cache it temporarily, and then execute it. This approach is useful when you want to run a package without permanently installing it in your project.
+
+| Use Case                 | Command                        | Installed?      | Stored Where              | Best For                  |
+| ------------------------ | ------------------------------ | --------------- | ------------------------- | ------------------------- |
+| Project dependency       | `npm install <pkg>`            | ✅               | Project’s `node_modules`  | Regular dependencies      |
+| Dev-only dependency      | `npm install --save-dev <pkg>` | ✅               | Project’s `node_modules`  | Dev tools (e.g., nodemon) |
+| One-time / temporary run | `npx <pkg>`                    | ❌ (cached only) | npm cache (`~/.npm/_npx`) | Quick runs or generators  |
+| Frequent global usage    | `npm install -g <pkg>`         | ✅               | Global `node_modules`     | Reusable CLI tools        |
+
+
+## use of npmrc file
+The .npmrc file is a configuration file for npm (Node Package Manager) that allows you to customize how npm behaves — both globally and per project.
+
+```npmrc
+registry=https://registry.npmjs.org/
+save-exact=true
+@my-org:registry=https://npm.myorg.com/
+//npm.myorg.com/:_authToken=${NPM_TOKEN}
+
+```
+
+* Registry URLs (where npm downloads packages from)
+* Authentication tokens (for private registries)
+* Proxy settings
+* Package installation preferences
+* Custom scripts or caching directories
+
+| Location        | Scope                                    | Typical Path                        |
+| --------------- | ---------------------------------------- | ----------------------------------- |
+| **Per-project** | Specific to one project                  | `./.npmrc` (in your project folder) |
+| **Per-user**    | Affects all npm operations for your user | `~/.npmrc`                          |
+| **Global**      | Affects all users (system-wide)          | `$PREFIX/etc/npmrc`                 |
+| **Built-in**    | Default npm settings                     | Comes with npm itself               |
+
+
+## Call the end point and abort it
+```js
+const controller = new AbortController();
+
+await fetch("https://jsonplaceholder.typicode.com/posts", { signal: controller.signal })
+await axios.get('/api/data', { signal: controller.signal });
+
+  
+// To abort the fetch request
+// controller.abort();
+```
