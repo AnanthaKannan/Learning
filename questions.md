@@ -972,3 +972,4 @@ await axios.get('/api/data', { signal: controller.signal });
 // To abort the fetch request
 // controller.abort();
 ```
+## - Implementing prototypal inheritance from scratch
