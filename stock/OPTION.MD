@@ -30,3 +30,105 @@
 * Intraday option strategies
 * Risk management (very important!)
 * How to practice safely
+
+## IV and EV
+* OTM - Intrinsic Value = 0, Premium = Time Value
+* ATM - Intrinsic Value = 0, Premium = Time Value
+* ITM - Intrinsic Value > 0, Premium = Intrinsic Value + Time Value
+
+## 
+Premium = Intrinsic Value + Time Value(Extrinsic Value)
+* Intrinsic Value = Current Price - Strike Price
+* Time Value = Premium - Intrinsic Value
+### HOW TO CALCULATE IV AND EV
+* Current Price = 24609
+* Strike Price = 24500
+* Premium = 200
+* Intrinsic Value = 24609 - 24500 = 109
+* Time Value = 200 - 109 = 91
+* IV = 109
+* EV = 91
+
+## Option Buy OTM Example of Loss and Profit scenario
+* Current Price = 24609
+* Strike Price = 24700 (OTM)
+* Premium = 150
+### SCENARIO 1: Price at Expiry = 24750 (Loss Scenario)
+* Intrinsic Value = 24750 - 24700 = 50
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 50 + 0 = 50
+* Net Profit/Loss = Total Value at Expiry - Premium = 50 - 150 = -100 (Loss)
+### SCENARIO 2: Price at Expiry = 24800 (Profit Scenario)
+* Intrinsic Value = 24800 - 24700 = 100
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 100 + 0 = 100
+* Net Profit/Loss = Total Value at Expiry - Premium = 100 - 150 = -50 (Loss)
+### SCENARIO 3: Price at Expiry = 24900 (Profit Scenario)
+* Intrinsic Value = 24900 - 24700 = 200
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 200 + 0 = 200
+* Net Profit/Loss = Total Value at Expiry - Premium = 200 - 150 = 50 (Profit)
+* Breakeven Point = Strike Price + Premium = 24700 + 150 = 24850
+* Summary: In this example, the option buyer incurs losses if the price at expiry is below 24850 and starts making profits only when the price exceeds this breakeven point.
+
+## Option Buy ITM Example of Profit scenario
+* Current Price = 24609
+* Strike Price = 24500 (ITM)
+* Premium = 200
+* Intrinsic Value = 24609 - 24500 = 109
+* Time Value = 200 - 109 = 91
+* IV = 109
+* EV = 91
+* Breakeven Point = Strike Price + Premium = 24500 + 200 = 24700
+
+### SCENARIO 1: Price at Expiry = 24650 (Profit Scenario)
+* Intrinsic Value = 24650 - 24500 = 150
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 150 + 0 = 150
+* Net Profit/Loss = Total Value at Expiry - Premium = 150 - 200 = -50 (Loss)
+### SCENARIO 2: Price at Expiry = 24750 (Profit Scenario)
+* Intrinsic Value = 24750 - 24500 = 250
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 250 + 0 = 250
+* Net Profit/Loss = Total Value at Expiry - Premium = 250 - 200 = 50 (Profit)
+### SCENARIO 3: Price at Expiry = 24800 (Profit Scenario)
+* Intrinsic Value = 24800 - 24500 = 300
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 300 + 0 = 300
+* Net Profit/Loss = Total Value at Expiry - Premium = 300 - 200 = 100 (Profit)
+* Summary: In this example, the option buyer incurs a loss if the price at expiry is below 24700 and starts making profits only when the price exceeds this breakeven point.
+
+## Option Buy ATM Example of Profit and Loss scenario
+* Current Price = 24609
+* Strike Price = 24600 (ATM)
+* Premium = 180
+* Breakeven Point = Strike Price + Premium = 24600 + 180 = 24780
+### SCENARIO 1: Price at Expiry = 24650 (Loss Scenario)
+* Intrinsic Value = 24650 - 24600 = 50
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 50 + 0 = 50
+* Net Profit/Loss = Total Value at Expiry - Premium = 50 - 180 = -130 (Loss)
+### SCENARIO 2: Price at Expiry = 24750 (Loss Scenario)
+* Intrinsic Value = 24750 - 24600 = 150
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 150 + 0 = 150
+* Net Profit/Loss = Total Value at Expiry - Premium = 150 - 180 = -30 (Loss)
+### SCENARIO 3: Price at Expiry = 24800 (Profit Scenario)
+* Intrinsic Value = 24800 - 24600 = 200
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 200 + 0 = 200
+* Net Profit/Loss = Total Value at Expiry - Premium = 200 - 180 = 20 (Profit)
+* Summary: In this example, the option buyer incurs losses if the price at expiry is below 24780 and starts making profits only when the price exceeds this breakeven point.
+
+---
+## Option Selling
+## Option Sell OTM Example of Profit and Loss scenario
+* Current Price = 24609
+* Strike Price = 24700 (OTM)
+* Premium = 150
+* Breakeven Point = Strike Price + Premium = 24700 + 150 = 24850
+### SCENARIO 1: Price at Expiry = 24750 (Profit Scenario)
+* Intrinsic Value = 24750 - 24700 = 50
+* Time Value = 0 (at expiry)
+* Total Value at Expiry = 50 + 0 = 50
+* Net Profit/Loss = Premium - Total Value at Expiry = 150 - 50 = 100 (Profit)
