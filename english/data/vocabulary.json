@@ -1,0 +1,21 @@
+[
+  {
+    "word": "kitten",
+    "pronunciation": "/ˈkɪtən/",
+    "meaning": "A young cat.",
+    "image": "kitten.jpg",
+    "sentences": [
+      "The kitten is sleeping.",
+      "I found a small kitten.",
+      "The kitten is playing with a ball.",
+      "My son likes the kitten."
+    ],
+    "mySentence": "Yesterday, I saw a cute kitten near my house.",
+    "related": [
+      "cat",
+      "puppy",
+      "pet",
+      "animal"
+    ]
+  }
+]

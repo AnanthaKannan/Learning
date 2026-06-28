@@ -1,0 +1,14 @@
+{
+  "name": "english",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "add": "node scripts/add-word.js",
+    "build": "node scripts/generate-md.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs"
+}
