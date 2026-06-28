@@ -14,9 +14,9 @@
 
 ## Vocabulary
 
-|                           Image                           | Word       | Pronunciation | Meaning      | Example Sentences                                                                                                                                                | My Sentence                                   | Related Words           |
-| :-------------------------------------------------------: | :--------- | :-----------: | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- | :---------------------- |
-| <img src="./images/kitten.png" alt="Kitten" width="120"/> | **kitten** |   /ˈkɪtən/    | A young cat. | • The kitten is sleeping.<br><br>• I found a small kitten near my house.<br><br>• The kitten is playing with a ball.<br><br>• My son likes the kitten very much. | Yesterday, I saw a cute kitten near my house. | cat, puppy, pet, animal |
+|                           Image                           | Word       | Pronunciation | Meaning      | Example Sentences                                                                                                                                    | My Sentence                                   | Related Words           |
+| :-------------------------------------------------------: | :--------- | :-----------: | :----------- | :--------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------------------------- | :---------------------- |
+| <img src="./images/kitten.png" alt="Kitten" width="120"/> | **kitten** |   /ˈkɪtən/    | A young cat. | • The kitten is sleeping.<br>• I found a small kitten near my house.<br>• The kitten is playing with a ball.<br>• My son likes the kitten very much. | Yesterday, I saw a cute kitten near my house. | cat, puppy, pet, animal |
 
 ---
 
