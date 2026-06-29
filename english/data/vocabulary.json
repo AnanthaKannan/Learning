@@ -17,5 +17,47 @@
       "pet",
       "animal"
     ]
+  },
+  {
+    "word": "solitude",
+    "pronunciation": "/ˈsɒlɪtjuːd/ (UK), /ˈsɑːlɪtuːd/ (US)",
+    "meaning": "The state of being alone, especially when it is peaceful and enjoyed.",
+    "image": "solitude.png",
+    "sentences": [
+      "She enjoyed the solitude of the forest.",
+      "After work, he spent an hour in solitude.",
+      "The mountain cabin offered complete solitude.",
+      "Sometimes, solitude helps us think clearly."
+    ],
+    "mySentence": "I enjoy a few minutes of solitude every morning before starting my work.",
+    "related": [
+      "alone",
+      "peace",
+      "silence",
+      "isolation",
+      "privacy",
+      "calm"
+    ]
+  },
+  {
+    "word": "griddle",
+    "pronunciation": "/ˈɡrɪd.əl/",
+    "meaning": "A flat cooking surface or pan used for cooking foods such as pancakes, eggs, dosa, roti, or burgers.",
+    "image": "griddle.png",
+    "sentences": [
+      "She cooked pancakes on the griddle.",
+      "The chef heated the griddle before making burgers.",
+      "My mother makes crispy dosa on a hot griddle.",
+      "Clean the griddle after cooking."
+    ],
+    "mySentence": "I bought a new griddle to make dosa and pancakes at home.",
+    "related": [
+      "pan",
+      "skillet",
+      "cook",
+      "stove",
+      "dosa",
+      "pancake"
+    ]
   }
 ]
